@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* Overall page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for product section */
+.small-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 40px;
+}
+
+/* Section title */
+.small-container h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+/* Row layout using flexbox */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Individual product card */
+.col-3 {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 15px; /* Reduced padding to make it smaller in height */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.col-3:hover {
+    transform: translateY(-5px);
+    background-color: #f1f1f1; /* Lighter background on hover */
+}
+
+/* Product image */
+.col-3 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Product name */
+.col-3 h4 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+/* Product description */
+.col-3 p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Star ratings */
+.rating i {
+    color: #ff9f43;
+    margin: 2px;
+}
+
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    margin: 8px 5px 0;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.cart {
+    background-color: #007bff;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+.btn.cart:hover {
+    background-color: #0069d9;
+}
+
+/* Responsive layout for tablets and mobiles */
+@media (max-width: 992px) {
+    .col-3 {
+        flex: 1 1 calc(50% - 30px);
+    }
+}
+
+@media (max-width: 600px) {
+    .col-3 {
+        flex: 1 1 100%;
+    }
+}
